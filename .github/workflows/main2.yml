@@ -31,7 +31,7 @@ jobs:
       run: |
         echo My name is P3TERX.
         echo Hello World! ${{ inputs.logLevel }} ${{ inputs.logLevel2 }} 
-        echo github.event.sender
+        echo ${{github.event.sender}}
 
     - name: TEST
       run: |
