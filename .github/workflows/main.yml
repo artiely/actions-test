@@ -1,0 +1,14 @@
+name: '构建画猜weapp-test'
+on:
+  workflow_dispatch:
+jobs:
+  build:
+    name: '构建测试'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@master
+      - uses: actions/setup-node@master
+        with:
+          node-version: '14.x'
+      - run: |
+          echo hello
