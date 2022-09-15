@@ -3,7 +3,7 @@ on:
   workflow_dispatch:
     inputs:
       logLevel:
-        description: 'Log level'
+        description: '选择要打包的小程序'
         required: true
         default: 'warning' 
         type: choice
@@ -11,23 +11,28 @@ on:
         - info
         - warning
         - debug 
-      print_tags:
-        description: 'True to print to STDOUT'
-        required: true 
-        type: boolean 
-      tags:
-        description: 'Test scenario tags'
-        required: true 
-        type: string
-      environment:
-        description: 'Environment to run tests against'
-        type: environment
-        required: true 
+      logLevel2:
+        description: '选择打包环境'
+        required: true
+        default: 'warning' 
+        type: choice
+        options:
+        - api
+        - dev
+        - alpha 
+        
 
 jobs:
-  print-tag:
+  build:
     runs-on: ubuntu-latest
-    if:  ${{ inputs.print_tags }} 
+
     steps:
-      - name: Print the input tag to STDOUT
-        run: echo  The tags are ${{ inputs.tags }} 
+    - name: Hello World
+      run: |
+        echo My name is P3TERX.
+        echo Hello World! ${{ inputs.logLevel }} ${{ inputs.logLevel2 }} 
+        echo github.event.sender
+
+    - name: TEST
+      run: |
+        echo test
