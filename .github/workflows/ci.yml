@@ -50,27 +50,13 @@ jobs:
           name: ${{ steps.create_tag.outputs.version }}
           tag: ${{ steps.create_tag.outputs.version }}
           body: |
-            Documentation ${{ steps.changelog.outputs.tag }}: https://raw.githack.com/jaywcjlove/github-action-contributors/${{ steps.changelog.outputs.gh-pages-short-hash }}/index.html  
+            version: ${{ steps.changelog.outputs.tag }}
+
+            [微信平台](https://mp.weixin.qq.com/) 
+            [QQ平台](https://q.qq.com/#/)
+            
             Comparing Changes: ${{ steps.changelog.outputs.compareurl }} 
             
             ${{ steps.changelog.outputs.changelog }}
 
-            ```yml
-            - run: mkdir -p build
-            - name: Generate Contributors Images
-              uses: jaywcjlove/github-action-contributors@main
-              with:
-                token: xxxxxxx
-                filter-author: renovate\[bot\]
-                output: build/CONTRIBUTORS.svg
-
-            - name: Deploy
-              uses: peaceiris/actions-gh-pages@v3
-              with:
-                github_token: xxxxxxx
-                publish_dir: ./build
-            ```
-
-            <a href="https://github.com/jaywcjlove/github-action-contributors/graphs/contributors">
-              <img src="https://jaywcjlove.github.io/github-action-contributors/CONTRIBUTORS.svg" />
-            </a>
+          
