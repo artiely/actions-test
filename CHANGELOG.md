@@ -1,3 +1,10 @@
+## [1.1.1](https://github.com/artiely/actions-test/compare/v1.1.0...v1.1.1) (2022-09-23)
+
+
+### Bug Fixes
+
+* 1 ([8743462](https://github.com/artiely/actions-test/commit/8743462b3a6ba1160d4d88e57cf148d3ab62676b))
+
 # [1.1.0](https://github.com/artiely/actions-test/compare/v1.0.0...v1.1.0) (2022-09-23)
 
 
