@@ -1,3 +1,15 @@
+# [1.1.0](https://github.com/artiely/actions-test/compare/v1.0.0...v1.1.0) (2022-09-23)
+
+
+### Bug Fixes
+
+* log ([51bf0ed](https://github.com/artiely/actions-test/commit/51bf0ed5d87a54fedfe730713394ac2ca51eda26))
+
+
+### Features
+
+* xx ([412d3ce](https://github.com/artiely/actions-test/commit/412d3ce3258bb7e31c0fa67450dc91ac2c5d9550))
+
 # 1.0.0 (2022-09-23)
 
 
