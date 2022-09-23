@@ -1,0 +1,27 @@
+{
+  "name": "actions-test",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/artiely/actions-test.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/artiely/actions-test/issues"
+  },
+  "homepage": "https://github.com/artiely/actions-test#readme",
+  "dependencies": {
+    "semantic-release": "^19.0.5"
+  },
+  "devDependencies": {
+    "@semantic-release/changelog": "^6.0.1",
+    "@semantic-release/git": "^10.0.1"
+  }
+}

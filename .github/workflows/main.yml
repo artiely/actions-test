@@ -1,14 +1,24 @@
-name: '构建画猜weapp-test'
+name: Release
 on:
-  workflow_dispatch:
+  push:
+    branches:
+      - master
 jobs:
-  build:
-    name: '构建测试'
-    runs-on: ubuntu-latest
+  release:
+    name: Release
+    runs-on: ubuntu-18.04
     steps:
-      - uses: actions/checkout@master
-      - uses: actions/setup-node@master
+      - name: Checkout
+        uses: actions/checkout@v2
         with:
-          node-version: '14.x'
-      - run: |
-          echo hello
+          fetch-depth: 0
+      - name: Setup Node
+        uses: actions/setup-node@v1
+        with:
+          node-version: 16
+      - name: Install
+        run: yarn
+      - name: Release
+        env:
+          GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
+        run: npx semantic-release
