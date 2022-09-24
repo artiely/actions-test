@@ -45,6 +45,7 @@ jobs:
       - name: Create Release
         uses: ncipollo/release-action@v1
         if: steps.create_tag.outputs.successful
+      - run: echo ${{ steps.changelog.outputs.changelog }}
         with:
           token: ${{ secrets.GH_TOKEN }}
           name: ${{ steps.create_tag.outputs.version }}
